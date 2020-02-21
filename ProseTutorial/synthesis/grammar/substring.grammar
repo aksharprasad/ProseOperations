@@ -1,0 +1,12 @@
+﻿using semantics ProseTutorial.Semantics;
+using learners ProseTutorial.WitnessFunctions;
+
+language Substring;
+
+@complete feature double Score = ProseTutorial.RankingScore;
+
+@input Dictionary<uint?,uint?> v;
+
+@start uint? program := Multiply(v,@recurse[7] program,@recurse[7] program) | Add(v,@recurse[7] program,@recurse[7] program) | Element(v,k);
+
+int k; 
